@@ -4,9 +4,9 @@ import Constants from '../../global_constants/Constants';
 /**
  * @returns {React.Component}
  */
-const TeamMember = () => {
+const TeamMember = props => {
     return <>
-        <li>{this.props.name}</li>
+        <li>{props.person.name}</li>
     </>;
 }
 
