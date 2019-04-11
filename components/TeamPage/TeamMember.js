@@ -6,7 +6,10 @@ import Constants from '../../global_constants/Constants';
  */
 const TeamMember = props => {
     return <>
-        <li>{props.person.name}</li>
+        <div className="person">
+            <section className="image"></section>
+            <section className="person-name">{props.person.name}</section>
+        </div>
     </>;
 }
 

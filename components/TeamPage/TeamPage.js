@@ -32,12 +32,47 @@ const TeamPage = () => {
     return <>
         <h1 className="header">Meet the Team</h1>
         <body>
-        <ul>
-            {console.log(teamMembers)}
-            {teamMembers.map(person => {
-                return <TeamMember key={person.id} person={person}/>;
-            })}
-        </ul>
+            <div className="teams">
+                <seciton className="col-xs">
+                    Adviser
+                </seciton>
+                <seciton className="col-xs">
+                    All
+                </seciton>
+                <seciton className="col-xs">
+                    Business
+                </seciton>
+                <seciton className="col-xs">
+                    Collaborations
+                </seciton>
+                <seciton className="col-xs">
+                    Design
+                </seciton>
+                <seciton className="col-xs">
+                    Drylab
+                </seciton>
+                <seciton className="col-xs">
+                    Leadership
+                </seciton>
+                <seciton className="col-xs">
+                    Outreach
+                </seciton>
+                <seciton className="col-xs">
+                    PI
+                </seciton>
+                <seciton className="col-xs">
+                    Presenters
+                </seciton>
+                <seciton className="col-xs">
+                    Wetlab
+                </seciton>
+            </div>
+            <div className="team-members">
+                {console.log(teamMembers)}
+                {teamMembers.map(person => {
+                    return <TeamMember key={person.id} person={person}/>;
+                })}
+            </div>
         </body>
     </>;
 }
