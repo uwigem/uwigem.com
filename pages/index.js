@@ -1,4 +1,5 @@
 import SideBySideContent from '../components/SideBySideContent/SideBySideContent';
+import '../global_constants/Global_Styles.css';
 // const leftWidth = 500;
 //import Dubs from "../static/dubs.jpeg";
 
