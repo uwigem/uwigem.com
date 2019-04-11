@@ -1,12 +1,13 @@
-import React, {useState, useEffect} from 'react';
+import './ImageCluster.css';
+import React, { useState, useEffect } from 'react';
 import Constants from '../../global_constants/Constants';
-import './ImageCluster/ImageCluster.css';
+
 
 /**
  * @returns {React.Component}
  */
 
-export const ImageCluster = (props) => {
+const ImageCluster = (props) => {
 
     // let numImage = props.images.length;
     // let imageOrder = [];
@@ -14,27 +15,67 @@ export const ImageCluster = (props) => {
     //     imageOrder.push(i);
     // }
 
-    const [imageOrdering, setImageOrdering] = useState([1, 2, 3]);
+    let sampleProps3 = [
+        { image: './img/sample-images/gudetama-1.png', priority: 0 },
+        { image: './img/sample-images/gudetama-2.jpg', priority: 1 },
+        { image: './img/sample-images/gudetama-3.png', priority: 2 },
+    ];
+
+    const [imageOrdering, setImageOrdering] = useState(sampleProps3);
 
     const changeImageOrdering = (event) => {
-        let ordering = event.target.className;
-        if (ordering.contains("order-1")) {
-            setImageOrdering([3, 1, 2]);
-        } else if (ordering.contains("order-3")) {
-            setImageOrdering([2, 3, 1]);
-        } else { // ordering.contains("order-2")
-            setImageOrdering([1, 2, 3]);
+
+        let clickedImageLocation = findItem("./img/" + event.target.src.substring(event.target.src.indexOf("sample-images")));
+        console.log(clickedImageLocation)
+        // console.log (event.target.src.substring(event.target.src.indexOf("sample-images")))
+
+        let newImageOrder = [...imageOrdering];
+        if (clickedImageLocation == 0) {
+
+            let saveValue = newImageOrder[0];
+            newImageOrder[0] = newImageOrder[2];
+            newImageOrder[2] = newImageOrder[1];
+            newImageOrder[1] = saveValue;
+
+
+        } else if (clickedImageLocation == 2) {
+
+            let saveValue = newImageOrder[2];
+            newImageOrder[2] = newImageOrder[0];
+            newImageOrder[0] = newImageOrder[1];
+            newImageOrder[1] = saveValue;
+
         }
+        console.log(newImageOrder);
+        console.log(imageOrdering)
+        setImageOrdering(newImageOrder);
+        // setImageOrdering(newImageOrder);
     }
 
-    let orderIndex = 0;
-    let imageElements = props.images.map((image) => {
-        let imageElement = <img 
-                    key={imageOrder[orderIndex]} 
-                    onClick={changeImageOrdering}
-                    className={'image priority-' + image.priority + ' cluster-design-1 order-' + imageOrdering[orderIndex]} 
-                    src={image.image} 
-                    alt={image.image} />
+    let findItem = (imgSRC) => {
+        console.log(imgSRC)
+        let index = 0;
+        let location = -1;
+        imageOrdering.forEach((image) => {
+            console.log(image.image)
+            if (image.image === imgSRC) {
+                console.log("match")
+                location = index;
+            }
+            index++;
+        });
+        return location;
+    }
+
+    let orderIndex = 1;
+    let imageElements = imageOrdering.map((image) => {
+        let imageElement = <img
+            key={image.image}
+            onClick={changeImageOrdering}
+            className={'image priority-' + image.priority + ' cluster-design-1 order-' + orderIndex}
+            src={image.image}
+            alt={image.image} />;
+        orderIndex++;
         return imageElement;
     });
 
@@ -45,3 +86,5 @@ export const ImageCluster = (props) => {
     );
 
 }
+
+export default ImageCluster

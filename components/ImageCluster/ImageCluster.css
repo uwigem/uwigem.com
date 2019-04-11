@@ -1,5 +1,4 @@
 .img-container {
-    float: left;
     display: flex;
     margin-bottom: 3rem;
     height: auto;
@@ -16,7 +15,7 @@
     vertical-align: top;
     height: auto;
     position: relative;
-    border: 1px lightgray solid;
+    /* border: 1px lightgray solid; */
     align-self: center;
     margin: 0.5rem;
 }

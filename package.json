@@ -21,6 +21,7 @@
     },
     "homepage": "https://github.com/uwigem/uwigem.com#readme",
     "dependencies": {
+        "live-server": "^1.2.1",
         "next": "^7.0.3",
         "react": "^16.8.1",
         "react-dom": "^16.8.1"
