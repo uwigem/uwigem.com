@@ -1,6 +1,19 @@
-import Link from 'next/link';
+import SideBySideContent from '../components/SideBySideContent/SideBySideContent';
+const leftWidth = 500;
+//import Dubs from "../static/dubs.jpeg";
+
+class LeftChild extends React.Component {
+    render() {
+        return <h1>LeftChild</h1>;
+    }
+};
+
+class RightChild extends React.Component {
+    render() {
+        return <h1>RightChild</h1>;
+    }
+};
 
 export default () => <>
-    <div>Next js home page</div>
-    <Link href="/about">Go to about page</Link>
+    <SideBySideContent LeftChild={<LeftChild />} RightChild={<RightChild />} leftWidth={leftWidth} />
 </>

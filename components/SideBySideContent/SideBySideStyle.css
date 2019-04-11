@@ -1,0 +1,9 @@
+    .sbsContent{
+    display:flex; 
+    flex-direction:row;
+  }
+  
+    .sbsChild{
+    padding: 10;
+    margin: 50;
+  }
