@@ -8,6 +8,7 @@ import Constants from '../../global_constants/Constants';
  */
 const TeamPage = () => {
     const [teamMembers, setTeamMembers] = useState([]);
+    const [filter, setFilter] = useState('All');
     let data = require('./team_members.json');
     
     
@@ -34,13 +35,17 @@ const TeamPage = () => {
         <body>
             <div className="teams">
                 <seciton className="col-xs">
-                    Adviser
+                    <button onClick={() => setFilter('Adviser')}>
+                        Adviser
+                    </button>
                 </seciton>
                 <seciton className="col-xs">
                     All
                 </seciton>
                 <seciton className="col-xs">
-                    Business
+                    <button onClick={() => setFilter('Business')}>
+                        Business
+                    </button>
                 </seciton>
                 <seciton className="col-xs">
                     Collaborations
@@ -66,11 +71,15 @@ const TeamPage = () => {
                 <seciton className="col-xs">
                     Wetlab
                 </seciton>
+                <seciton className="col-xs">
+                    <button onClick={() => setFilter('Web Developer')}>
+                        Web Development
+                    </button>
+                </seciton>
             </div>
             <div className="team-members">
-                {console.log(teamMembers)}
                 {teamMembers.map(person => {
-                    return <TeamMember key={person.id} person={person}/>;
+                    return <TeamMember key={person.id} person={person} filter={filter}/>;
                 })}
             </div>
         </body>
