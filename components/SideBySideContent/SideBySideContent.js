@@ -8,8 +8,8 @@ import './SideBySideStyle.css'
 
 const SideBySideContent = (props) => {
     return <>
-        <div class='sbsContent'>
-            <div className='sbsChild' style={{ width: props.leftWidth, backgroundColor: "lightBlue" }}>
+        <div className='sbsContent'>
+            <div className='sbsChild' style={{ width: props.leftWidth ? props.leftWidth + "%" : '50%', backgroundColor: "lightBlue" }}>
                 {props.LeftChild}
             </div>
             <div className='sbsChild'> {props.RightChild} </div>

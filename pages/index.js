@@ -1,5 +1,5 @@
 import SideBySideContent from '../components/SideBySideContent/SideBySideContent';
-const leftWidth = 500;
+// const leftWidth = 500;
 //import Dubs from "../static/dubs.jpeg";
 
 class LeftChild extends React.Component {
@@ -15,5 +15,5 @@ class RightChild extends React.Component {
 };
 
 export default () => <>
-    <SideBySideContent LeftChild={<LeftChild />} RightChild={<RightChild />} leftWidth={leftWidth} />
+    <SideBySideContent LeftChild={<LeftChild />} RightChild={<RightChild />} />
 </>
