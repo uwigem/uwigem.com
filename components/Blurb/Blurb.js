@@ -1,46 +1,35 @@
 import React from "react";
-import { Component } from "react";
-import "Blurb.css";
+import "./Blurb.css";
 
 //Defines a component representing a message in a list
-class BlurbTitle extends Component {
-  render() {
-    const divStyle = {
-      color: this.props.color,
-      textAlign: this.props.align
-    };
-    return <h1 style={divStyle}>{this.props.text}</h1>;
-  }
-}
+const BlurbTitle = ({ color, align, text }) => {
+  const divStyle = {
+    color,
+    textAlign: align
+  };
+  return <h1 style={divStyle}>{text}</h1>;
+};
 
 //A component that renders a trio of messages
-class BlurbComponent extends Component {
-  render() {
-    let blurbBody = this.props.blurbBody;
-    let blurbSubtitle = this.props.blurbSubtitle;
-
-    let titles = this.props.blurbTitleArray.map(array => {
-      let component = (
-        <BlurbTitle color={array.color} align={array.align} text={array.text} />
-      ); //pass prop down!
-      return component; //add this new component to resulting array
-    });
-
+const BlurbComponent = ({ blurbTitleArray, blurbBody, blurbSubtitle }) => {
+  const titles = blurbTitleArray.map(array => {
     return (
-      <div className="blurb">
-        <div className="blurb-title">{titles}</div>
-        <div className="blurb-body">
-          <p style={{ textAlign: blurbBody.align }}>{blurbBody.text}</p>
-        </div>
-        <div className="blurb-subtitle">
-          <h4 style={{ textAlign: blurbSubtitle.align }}>
-            {blurbSubtitle.text}
-          </h4>
-        </div>
-      </div>
+      <BlurbTitle color={array.color} align={array.align} text={array.text} />
     );
-  }
-}
+  });
+
+  return (
+    <div className="blurb">
+      <div className="blurb-title">{titles}</div>
+      <div className="blurb-body">
+        <p style={{ textAlign: blurbBody.align }}>{blurbBody.text}</p>
+      </div>
+      <div className="blurb-subtitle">
+        <h4 style={{ textAlign: blurbSubtitle.align }}>{blurbSubtitle.text}</h4>
+      </div>
+    </div>
+  );
+};
 
 {
   /*

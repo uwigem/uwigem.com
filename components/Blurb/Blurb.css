@@ -1,0 +1,28 @@
+.blurb {
+  height: 250px;
+  width: 350px;
+  padding: 15px 25px;
+  background-color: lightgray;
+  font-family: sans-serif;
+}
+
+.blurb-title {
+  font-size: 1em;
+  height: 30%;
+}
+
+.blurb-title h1 {
+  margin-block-start: 0em;
+  margin-block-end: -0.4em;
+}
+
+.blurb-body {
+  font-size: 1.2em;
+  margin: 1em 0em;
+  height: 40%;
+}
+
+.blurb-subtitle {
+  font-size: 0.8em;
+  height: 10%;
+}
