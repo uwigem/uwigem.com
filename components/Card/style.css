@@ -1,3 +1,17 @@
-.card-whole {
-	
+.card {
+	height: 300px;
+	width: 500px;
+	background-color: aqua;
+	border: 10px red;
+	margin: 30px;
+}
+
+.card-title {
+	height: 50px;
+	width: 80%;
+	background-color: azure;
+}
+
+.card-body {
+	width: 90%;
 }
