@@ -15,5 +15,5 @@ class RightChild extends React.Component {
 };
 
 export default () => <>
-    <SideBySideContent LeftChild={<LeftChild />} RightChild={<RightChild />} leftWidth={leftWidth} />
+    <SideBySideContent LeftChild={<LeftChild />} RightChild={<RightChild />} />
 </>
