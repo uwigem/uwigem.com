@@ -1,16 +1,16 @@
 import SideBySideContent from '../components/SideBySideContent/SideBySideContent';
-const leftWidth = 500;
-//import Dubs from "../static/dubs.jpeg";
+const leftWidth = 50;
+// import dubs from "../static/dubs.jpg";
 
 class LeftChild extends React.Component {
     render() {
-        return <h1>LeftChild</h1>;
+        return <h1>Left Child</h1>;
     }
 };
 
 class RightChild extends React.Component {
     render() {
-        return <h1>RightChild</h1>;
+        return <h1>Right Child</h1>;
     }
 };
 
