@@ -1,0 +1,25 @@
+.sbsContent{
+    display:flex; 
+    flex-direction:row;
+}
+
+.sbsChild{
+    /* padding: 10; */
+    width: 50%;
+    /* margin: 50; */
+}
+
+html {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+
+
+
+/*# sourceMappingURL=styles.chunk.css.map*/

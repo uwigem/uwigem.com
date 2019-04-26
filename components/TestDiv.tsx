@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TestDiv = () => {
+const TestDiv: React.FunctionComponent = () => {
     return <div>TEST</div>
 
 }

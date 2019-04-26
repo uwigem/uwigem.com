@@ -5706,7 +5706,7 @@ function connect(options) {
       error.name = err.name;
       error.stack = err.stack; // __NEXT_DIST_DIR is provided by webpack
 
-      (0, _sourceMapSupport.rewriteStacktrace)(error, "D:\\Files\\iGEM\\uwigem.com\\.next");
+      (0, _sourceMapSupport.rewriteStacktrace)(error, "/Users/williamk/Desktop/Projects/iGEM_2019/uwigem.com/.next");
       return error;
     }
   };
@@ -17960,7 +17960,7 @@ module.exports = function(module) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Files\iGEM\uwigem.com\node_modules\next\dist\client\next-dev */"./node_modules/next/dist/client/next-dev.js");
+module.exports = __webpack_require__(/*! /Users/williamk/Desktop/Projects/iGEM_2019/uwigem.com/node_modules/next/dist/client/next-dev */"./node_modules/next/dist/client/next-dev.js");
 
 
 /***/ }),

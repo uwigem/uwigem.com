@@ -1,15 +1,13 @@
 import React from "react";
+import { BlurbTitle } from './BlurbTitle';
 import "./Blurb.css";
 
-const BlurbTitle = ({ color, align, text }) => {
-  const divStyle = {
-    color,
-    textAlign: align
-  };
-  return <h1 style={divStyle}>{text}</h1>;
-};
-
-const BlurbComponent = ({ blurbTitleArray, blurbBody, blurbSubtitle }) => {
+/**
+ * Blurb is a single blurb on the webpage 
+ * 
+ * @param
+ */
+export const Blurb = ({ blurbTitleArray, blurbBody, blurbSubtitle }) => {
   const titles = blurbTitleArray.map(blurbTitile => {
     return (
       <BlurbTitle
