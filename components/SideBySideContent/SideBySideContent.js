@@ -15,7 +15,9 @@ const SideBySideContent = (props) => {
             <div style={{ width: props.leftWidth ? props.leftWidth + "%" : '50%' }}>
                 {props.LeftChild}
             </div>
-            <div> {props.RightChild} </div>
+            <div style={{ width: props.leftWidth ? 100 - props.leftWidth + "%" : '50%' }}>
+                {props.RightChild}
+            </div>
         </div>
     </>
 }

@@ -1,10 +1,10 @@
 import SideBySideContent from '../components/SideBySideContent/SideBySideContent';
-const leftWidth = 50;
-// import dubs from "../static/dubs.jpg";
+const leftWidth = 40;
 
 class LeftChild extends React.Component {
     render() {
-        return <h1>Left Child</h1>;
+        return <img src={"../static/dubs.jpeg"} alt="Dubs" />;
+        // return <h1>Left Child</h1>;
     }
 };
 
