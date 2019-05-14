@@ -1,12 +1,12 @@
 .img-container {
     display: flex;
     margin-bottom: 3rem;
-    height: auto;
+    height: 30%;
     justify-content: center;
-    overflow: hidden;
+    overflow-x: hidden;
     /* overflow-x: hidden results in scrolling */
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     flex-grow: 1;
 }
 
@@ -15,9 +15,165 @@
     vertical-align: top;
     height: auto;
     position: relative;
-    /* border: 1px lightgray solid; */
+    border: 1px lightgray solid;
     align-self: center;
     margin: 0.5rem;
+}
+
+/* Exit Animation */
+
+@keyframes imageExitAnimateTopLeft {
+    from { 
+        /* max-width: 40%;  */
+        opacity: 1;
+        transform: scale(1);
+        transform-origin: top left;
+    }
+    to { 
+        /* max-width: 0%; */
+        opacity: 0;
+        transform: scale(0);
+        transform-origin: top left;
+    }
+}
+
+@keyframes imageExitAnimateTopRight {
+    from { 
+        /* max-width: 40%;  */
+        opacity: 1;
+        transform: scale(1);
+        transform-origin: top right;
+    }
+    to { 
+        /* max-width: 0%; */
+        opacity: 0;
+        transform: scale(0);
+        transform-origin: top right;
+    }
+}
+
+@keyframes imageExitAnimateBottomRight {
+    from { 
+        /* max-width: 40%;  */
+        opacity: 1;
+        transform: scale(1);
+        transform-origin: bottom right;
+    }
+    to { 
+        /* max-width: 0%; */
+        opacity: 0;
+        transform: scale(0);
+        transform-origin: bottom right;
+    }
+}
+
+@keyframes imageExitAnimateBottomLeft {
+    from { 
+        /* max-width: 40%;  */
+        opacity: 1;
+        transform: scale(1);
+        transform-origin: bottom left;
+    }
+    to { 
+        /* max-width: 0%; */
+        opacity: 0;
+        transform: scale(0);
+        transform-origin: bottom left;
+    }
+}
+
+/* Enter Animation */
+@keyframes imageEnterAnimateTopLeft {
+    from {
+        opacity: 0;
+        transform: scale(0);
+        transform-origin: top left;
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+        transform-origin: top left;
+    }
+}
+
+@keyframes imageEnterAnimateTopRight {
+    from {
+        opacity: 0;
+        transform: scale(1);
+        transform-origin: top right;
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(5);
+        transform-origin: top right;
+    }
+}
+
+@keyframes imageEnterAnimateBottomLeft {
+    from {
+        opacity: 0;
+        transform: scale(0);
+        transform-origin: bottom left;
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+        transform-origin: bottom left;
+    }
+}
+
+@keyframes imageEnterAnimateBottomRight {
+    from {
+        opacity: 0;
+        transform: scale(0);
+        transform-origin: bottom right;
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+        transform-origin: bottom right;
+    }
+}
+
+.imageEnterAnimateBottomLeft, .imageEnterAnimateBottomRight, .imageEnterAnimateTopLeft, .imageEnterAnimateTopRight 
+.imageExitAnimateTopRight, .imageExitAnimateTopLeft, .imageExitAnimateBottomRight, .imageExitAnimateBottomLeft {
+    animation-duration: 0.3s;
+}
+
+.imageEnterAnimateBottomRight {
+    animation-name: imageEnterAnimateBottomRight;
+}
+
+.imageEnterAnimateBottomLeft {
+    animation-name: imageEnterAnimateBottomLeft;
+}
+
+.imageEnterAnimateTopLeft {
+    animation-name: imageEnterAnimateTopLeft;
+}
+
+.imageEnterAnimateTopRight {
+    animation-name: imageEnterAnimateTopRight;
+}
+
+.imageExitAnimateTopRight {
+    animation-name: imageExitAnimateTopRight;
+}
+
+.imageExitAnimateTopLeft {
+    animation-name: imageExitAnimateTopLeft;
+}
+
+.imageExitAnimateBottomLeft {
+    animation-name: imageExitAnimateBottomLeft;
+}
+
+.imageExitAnimateBottomRight {
+    animation-name: imageExitAnimateBottomRight;
 }
 
 .image.order-2 { 
@@ -31,7 +187,6 @@
         /* width: 50%; Change based on content on right */
         justify-content: flex-start;
         margin-right: 3rem;
-        overflow: visible;
         margin-bottom: 3rem;
     }
 
