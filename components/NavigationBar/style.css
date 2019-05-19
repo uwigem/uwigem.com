@@ -1,14 +1,23 @@
 .navbar {
-	background-color: #F0F8FF;
+	background-color: grey;
 	height: 50px;
 	width: 100%;
 	display: inline-flex;
 }
 
 .navbar-logo-container {
-	background-color: black;
 	height: 50px;
 	width: 50px;
+	background-image: url(logo.svg);
+	background-repeat: no-repeat;
+	background-size: 45px 45px;
+	background-position: center;
+	transition: 500ms;
+}
+
+.navbar-logo-container:hover {
+	filter: invert(100%);
+	transition: 500ms;
 }
 
 .navbar-link-container {
@@ -21,13 +30,18 @@
 }
 
 .navlink-container {
-	background-color: gainsboro;
 	margin: 10px;
-	margin-left: 50px;
-	margin-right: 50px;
+	margin-left: 25px;
+	margin-right: 25px;
 	padding-left: 15px;
 	padding-right: 15px;
+	transition: 500ms;
+}
 
+.navlink-container:hover {
+	background-color: black;
+	color: aliceblue;
+	transition: 500ms;
 }
 
 .navlink {
