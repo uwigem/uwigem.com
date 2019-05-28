@@ -1,8 +1,8 @@
 import React from 'react';
 
 type SideBySideProps = {
-    leftChild: React.FunctionComponent,
-    rightChild: React.FunctionComponent,
+    leftChild: JSX.Element,
+    rightChild: JSX.Element,
     leftWidth?: number
 }
 
