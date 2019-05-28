@@ -23,7 +23,7 @@ const Page: React.FunctionComponent<PageProps> = ({ children, dataRoute }) => {
         return () => {
             dbRef.off();
         }
-    }, [])
+    }, []);
 
     return <>
         {!data && <></>}

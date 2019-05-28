@@ -1,0 +1,4 @@
+.sbsContainer{
+  display: flex; 
+  flex-direction: row;
+}
